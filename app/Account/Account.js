@@ -2,17 +2,11 @@
 
     angular
         .module('myApp')
-        .component('accountComponent', {
-            templateUrl: 'Account/Account.html',
-            controller: function(AccountStore) {
-              var vm = this;
+        .controller('AccountCtrl', function(AccountStore) {
+          var vm = this;
 
-              vm.addAccount = function(user) {
-                  AccountStore.addItem(user);
-              };
-
-              vm.getItems = function() {
-                  AccountStore.getItems();
-              };
-            }
-        })
+          vm.addAccount = function(user) {
+              AccountStore.addItem(user);
+              console.log(user);
+          };
+        });

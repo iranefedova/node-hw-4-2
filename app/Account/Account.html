@@ -11,11 +11,10 @@
 
 <h2>Личный кабинет</h2>
 
-<form class="accountForm" name="accountForm" novalidate>
+<form class="accountForm" name="accountForm" novalidate
   <div class="form-group">
       <label>Имя</label>
-      <span ng-if="Object.keys(vm.getItems()).length == 0">{{vm.getItems().name}}</span>
-      <input class="form-control" data-ng-model="vm.newUser.name" type="text" placeholder="Имя" required ng-minlength="2" name="username" ng-if="Object.keys(vm.getItems()).length != 0">
+      <input class="form-control" data-ng-model="vm.newUser.name" type="text" placeholder="Имя" required ng-minlength="2" name="username">
   </div>
 
   <div ng-messages="accountForm.username.$error" ng-if="accountForm.username.$dirty">

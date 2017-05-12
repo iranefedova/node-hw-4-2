@@ -35,8 +35,8 @@ config(function($stateProvider) {
         })
         .state({
           name: 'account',
-          url: '/myaccount'
-          // templateUrl: 'Account/Account.html'
-          // controller: 'AccountCtrl as vm'
+          url: '/myaccount',
+          templateUrl: 'Account/Account.html',
+          controller: 'AccountCtrl as vm'
         });
 });

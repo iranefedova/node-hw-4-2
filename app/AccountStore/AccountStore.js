@@ -13,12 +13,11 @@ angular
                 return state.accountInfo;
             },
             addItem(item) {
-                state.accountInfo = {
+                state.accountInfo[0] = {
                     name: item.name,
                     email: item.email,
                     phone: item.phone
                 };
             }
         };
-
     })
