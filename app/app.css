@@ -27,3 +27,8 @@
 .accountForm input {
   margin-right: 15px;
 }
+
+.btn-default.active {
+  background-color: #1abc9c !important;
+  color: #fff !important;
+}

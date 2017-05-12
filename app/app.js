@@ -4,8 +4,8 @@
 angular.module('myApp', [
     'ui.router',
     'ngMessages'
-]).
-config(function($stateProvider) {
+])
+.config(function($stateProvider) {
 
     $stateProvider
         .state({
@@ -39,4 +39,16 @@ config(function($stateProvider) {
           templateUrl: 'Account/Account.html',
           controller: 'AccountCtrl as vm'
         });
+})
+.controller('MenuCtrl', function($scope) {
+  $scope.menu = [{
+    "title": "Список",
+    "href": "list"
+  }, {
+      "title": "Добавить нового",
+      "href": "createNewPokemon"
+  }, {
+      "title": "Личный кабинет",
+      "href": "account"
+  }];
 });

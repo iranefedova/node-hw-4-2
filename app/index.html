@@ -22,13 +22,11 @@
 <body>
     <div class="container">
 
-        <div class="panel panel-default">
+        <div class="panel panel-default" ng-controller="MenuCtrl">
             <div class="panel-body">
 
                 <div class="btn-group" role="group">
-                    <a class="btn btn-default" data-ui-sref="list">Список</a>
-                    <a class="btn btn-default" data-ui-sref="createNewPokemon">Добавить нового</a>
-                    <a class="btn btn-default" data-ui-sref="account">Личный кабинет</a>
+                    <a ng-repeat="link in menu" class="btn btn-default" data-ui-sref="{{link.href}}" data-ui-sref-active="active">{{link.title}}</a>
                 </div>
 
             </div>
